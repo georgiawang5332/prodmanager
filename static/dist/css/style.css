@@ -1,0 +1,534 @@
+* {
+  /*outline: 1px solid red;*/
+}
+.container .row *,
+.container .row *:before,
+.container .row *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body, p, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+ul>li{
+  list-style-type:none;
+}
+
+body {
+  /*color: gray !important;*/
+}
+
+/* home page  💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋*/
+
+/*關於我們*/
+
+/*PRE-CONSTRUCTION 比YEAH */
+.dummy {
+  margin-top: 100%;
+}
+
+.block {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  /*background: #666;*/
+}
+
+.padding_all {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+/*our projects*/
+.main_w_title {
+  padding-top: 22px;
+}
+
+.our_project_filter {
+  bottom: 0;
+}
+
+ul.our_project_filter {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li > a.a_nl {
+  color: #000b16 !important;
+  background-color: #f4f6f9 !important;
+  border-radius: 0 !important;
+}
+
+/*our projects - 照片*/
+.container {
+  position: relative;
+  /*width: 100%;*/
+}
+
+img {
+  /*vertical-align: middle;*/
+  /*border: 0;*/
+  display: block;
+  width: 100%;
+  height: auto;
+  /*filter: opacity(30%);*/
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  /*background-color: #0f8d86;*/
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  /*給圖片動態新增半透明遮罩效果*/
+  background-color: rgba(251, 251, 251, .8);
+}
+
+.text {
+  width: 100%;
+  color: #e8e8e8;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*text - */
+h4.shadow_h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #31353d;
+  /*opacity: 0;*/
+  -webkit-transform: translateY(1.5rem);
+  -ms-transform: translateY(1.5rem);
+  transform: translateY(1.5rem);
+  -webkit-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+.h4_text {
+  text-shadow: -1px -1px #f3f3f3, 1px 1px #333
+}
+
+p.shadow_p {
+  font-size: 12px;
+  color: #31353d;
+  font-family: "Montserrat", sans-serif;
+  line-height: 22px;
+  padding: 5px 0 8px 0;
+  /*opacity: 0;*/
+  -webkit-transform: translateY(.6rem);
+  -ms-transform: translateY(.6rem);
+  transform: translateY(.6rem);
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+a.shadow_btn {
+  text-transform: uppercase;
+  /*opacity: 0;*/
+  -webkit-transform: translateY(1.5rem);
+  -ms-transform: translateY(1.5rem);
+  transform: translateY(1.5rem);
+  -webkit-transition: all 1.4s ease;
+  -o-transition: all 1.4s ease;
+  transition: all 1.4s ease;
+}
+
+/* before和::after偽元素 失敗 */
+.main_w_title {
+  padding-top: 22px;
+}
+
+.main_w_title h2 {
+  font-size: 40px;
+  font-family: "PT Sans", sans-serif;
+  color: #31353d;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.main_w_title h2:before {
+  content: "";
+  width: 170px;
+  height: 100px;
+  border: 6px solid #ebebeb;
+  position: absolute;
+  left: 47px;
+  bottom: 5px;
+  z-index: -1;
+}
+
+/*     work with us ///////////////////////////// */
+.work_area {
+  background: url(https://preview.colorlib.com/theme/webuilder/img/work-bg.jpg) no-repeat scroll center center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 60px 0;
+}
+
+.work_area .work_content {
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.main_title {
+  text-align: center;
+}
+
+.main_title h2 {
+  font-size: 40px;
+  font-family: "PT Sans", sans-serif;
+  color: #e8e8e8;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.main_title h2:before {
+  content: "";
+  width: 170px;
+  height: 100px;
+  border: 6px solid rgba(255, 255, 255, .08);
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 10px;
+  z-index: -1;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.main_title h2 {
+  font-size: 40px;
+  font-family: "PT Sans", sans-serif;
+  color: #e8e8e8;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.work_area .work_content p {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: "Open Sans", sans-serif;
+  color: #e8e8e8;
+  padding: 25px 0 60px 0;
+}
+
+.get_bg_btn {
+  display: inline-block;
+  padding: 0 35px;
+  border: 2px solid #ffcd00;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: #31353d;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
+  transition: color .5s;
+}
+
+.get_bg_btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #ffcd00;
+  height: 250px;
+  width: 300px;
+  border-radius: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -50px;
+  -webkit-transition: all .7s;
+  -o-transition: all .7s;
+  transition: all .7s;
+}
+
+.container:after, .row:after, .nav:after, .navbar:after, .navbar-header:after, .navbar-collapse:after, .panel-body:after {
+  clear: both;
+}
+
+/*     our team area ///////////////////////////// */
+/*title name design*/
+.our_team_area {
+  padding: 100px 0 65px 0;
+  display: block;
+}
+
+.container-fluid:before, .container-fluid:after, .row:before, .row:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .panel-body:before, .panel-body:after {
+  content: " ";
+  display: table;
+}
+
+.our_team_area .main_b_r_title {
+  margin-bottom: 35px;
+  z-index: 1;
+}
+
+.main_b_r_title {
+  text-align: right;
+}
+
+.main_b_r_title h2.h2_title {
+  font-size: 40px;
+  font-family: "PT Sans", sans-serif;
+  color: #31353d;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.main_b_r_title h2.h2_title:before {
+  content: "";
+  width: 170px;
+  height: 100px;
+  border: 6px solid #ebebeb;
+  /*border: 6px solid #000;*/
+  position: absolute;
+  right: 36px;
+  bottom: 10px;
+  z-index: -1;
+}
+
+.main_b_r_title h6 {
+  font-size: 15px;
+  font-family: "PT Sans", sans-serif;
+  color: #ffcd00;
+  font-weight: bold;
+  padding-top: 12px;
+}
+
+/*image three pic*/
+.container_test {
+  height: 100%;
+  width: 100%;
+  /*max-height: 800px;*/
+  /*max-width: 1280px;*/
+  /*min-height: 600px;*/
+  /*min-width: 1000px;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.border {
+  height: 369px;
+  width: 290px;
+  /*height: 369px;*/
+  /*width: 290px;*/
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+
+.border:hover {
+  border: 1px solid #fff;
+}
+/*home 的card內容卡住所有使用bs的card 所以你要自己去修改 因為已經大亂了 */
+/*.card { */
+/*  height: 379px;*/
+/*  width: 300px;*/
+/*  background: #808080;*/
+/*  border-radius: 10px;*/
+/*  transition: background 0.8s;*/
+/*  overflow: hidden;*/
+/*  background: #000;*/
+/*  box-shadow: 0 70px 63px -60px #000;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  position: relative;*/
+/*}*/
+
+.card0 {
+  background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg") center center no-repeat;
+  background-size: 300px;
+}
+
+.card0:hover {
+  background: url("https://i.pinimg.com/736x/8f/a0/51/8fa051251f5ac2d0b756027089fbffde--terry-o-neill-al-pacino.jpg") left center no-repeat;
+  background-size: 600px;
+}
+
+.card0:hover h2 {
+  opacity: 1;
+}
+
+.card0:hover .fa {
+  opacity: 1;
+}
+
+.card1 {
+  background: url("https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg") center center no-repeat;
+  background-size: 300px;
+}
+
+.card1:hover {
+  background: url("https://i.pinimg.com/originals/28/d2/e6/28d2e684e7859a0dd17fbd0cea00f8a9.jpg") left center no-repeat;
+  background-size: 600px;
+}
+
+.card1:hover h2 {
+  opacity: 1;
+}
+
+.card1:hover .fa {
+  opacity: 1;
+}
+
+.card2 {
+  background: url("https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg") center center no-repeat;
+  background-size: 300px;
+}
+
+.card2:hover {
+  background: url("https://i.pinimg.com/originals/ee/85/08/ee850842e68cfcf6e3943c048f45c6d1.jpg") left center no-repeat;
+  background-size: 600px;
+}
+
+.card2:hover h2.h2_opacity {
+  opacity: 1;
+}
+
+.card2:hover .fa {
+  opacity: 1;
+}
+
+h2.h2_opacity {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #fff;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/*.fa {*/
+/*  opacity: 0;*/
+/*  transition: opacity 1s;*/
+/*}*/
+
+.icons {
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 226px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+@media (max-width: 480px) {
+  /* nav bar design - our projects /////////////////////*/
+  .flex-nav {
+    display: flex;
+    float: left !important;
+    padding: 0 !important;
+  }
+
+  /* end:  nav bar design - our projects /////////////////////*/
+
+}
+
+@media (max-width: 767px) {
+  /* nav bar design - our projects /////////////////////*/
+  .flex-nav {
+    display: flex;
+    float: left !important;
+    padding: 0 !important;
+  }
+
+  /* end:  nav bar design - our projects /////////////////////*/
+
+}
+
+@media (max-width: 768px) and (max-width: 979px) {
+  /* nav bar design - our projects /////////////////////*/
+  .flex-nav {
+    display: flex;
+    float: left !important;
+    padding: 0 !important;
+  }
+  /* end:  nav bar design - our projects /////////////////////*/
+
+}
+
+/* context us page 💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋💋*/
+.card-tools {
+    float: right;
+    margin-right: -0.625rem;
+    margin-bottom: -0.3rem;
+    margin-top: -0.3rem;
+    width: 150px;
+}
+/* 新增部分 */
+/*.icon-action {*/
+/*    margin-top: 5px;*/
+/*    float: right;*/
+/*    font-size: 80%;*/
+/*}*/
+
+/*.list-group-item .title {*/
+/*    margin-top: 5px;*/
+/*    margin-bottom: 12px;*/
+/*    font-weight: 600;*/
+/*}*/
+
+/*status.html 對於小錯誤一些修改*/
+.card-title{
+  float: none !important;
+}
+/* milt_sear APP */
+#id_occupation>li{
+  float: left;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Search</title>
+</head>
+<body>
+<center>
+  <h1>how to Implement Multiple Search Functionality in Django</h1>
+  <h1>如何在 Django 中實現多重搜索功能</h1>
+  <h3>Django web 教學</h3>
+  <hr>
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="radio" value="M" name="gender"> Male |
+    <input type="radio" value="F" name="gender"> Female
+
+    <select name="occupation">
+      <option selected disabled=true>-- 選擇 職業 --</option>
+      <option>工程</option>
+      <option>業務</option>
+      {#      <option>會計</option>#}
+{#      <option>行政</option>#}
+      {#      {% for i in occupations %}#}
+      {#        <option>{{ i.name }}</option>#}
+      {#      {% endfor %}#}
+    </select>
+    <input type="submit" value="Search"/>
+
+    <hr>
+
+    <table border="1">
+      <tr>
+        <th>員工編號</th>
+        <th>員工姓名</th>
+        <th>性別</th>
+        <th>職業</th>
+        <th>薪資</th>
+      </tr>
+      {% for result in EmpModel %}
+        <tr>
+          <td>{{ result.empid }}</td>
+          <td>{{ result.empname }}</td>
+          <td>{{ result.gender }}</td>
+          <td>{{ result.occupation }}</td>
+          <td>{{ result.salary }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+
+  </form>
+
+
+
+</center>
+</body>
+</html>

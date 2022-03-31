@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.6">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>{% block title %}牛肉 Dashboard · Bootstrap design{% endblock %}</title>
+
+  {% block links %}
+    {% include '_includes/links.html' %}
+  {% endblock %}
+</head>
+
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  {% block navbar %}
+    {% include '_includes/navbar.html' %}
+  {% endblock %}
+
+  {% block sidebar %}
+    {% include '_includes/sidebar.html' %}
+  {% endblock %}
+
+  {% block content %}{% endblock %}
+
+  {% block aside %}
+    {% include '_includes/aside.html' %}
+  {% endblock %}
+
+  {% block footer %}
+    {% include '_includes/footer.html' %}
+  {% endblock %}
+</div>
+<!-- ./wrapper -->
+
+
+{% block scripts %}
+  {% include '_includes/scripts.html' %}
+{% endblock %}
+
+
+</body>
+</html>

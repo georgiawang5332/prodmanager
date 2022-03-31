@@ -1,0 +1,245 @@
+{% load static %}
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="index3.html" class="brand-link">
+    <img src="{% static 'dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+         style="opacity: .8">
+    <span class="brand-text font-weight-light">AdminLTE 3</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="{% static 'dist/img/user2-160x160.jpg' %}" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">{{ user|truncatechars:6 }}</a>
+      </div>
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              第一
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Active Page</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Inactive Page</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="{% url 'dashboard:home' %}" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Dashboard
+              {#              <span class="right badge badge-danger">New</span>#}
+              <i class="right fas fa-angle-left"></i>
+
+            </p>
+          </a>
+          <ul class="nav nav-treeview" style="display: none;">
+            {#            first#}
+            <li class="nav-item">
+              <a href="{% url 'dashboard:home' %}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  dashboard 儀錶板
+                  {#                  <i class="right fas fa-angle-left"></i>#}
+                </p>
+              </a>
+            </li>
+            {#            second#}
+
+            <li class="nav-item">
+              <a href="{% url 'dashboard:products' %}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  訂購單
+                  {#                  <i class="right fas fa-angle-left"></i>#}
+                </p>
+              </a>
+            </li>
+
+
+          </ul>
+        </li>
+
+
+        {#        test#}
+        <li class="nav-item">
+          <a href="{% url 'miltSear:milt_sear' %}" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              search2
+              {#              <span class="right badge badge-danger">New</span>#}
+              <i class="right fas fa-angle-left"></i>
+
+            </p>
+          </a>
+
+        </li>
+
+
+{#        <li class="nav-item">#}
+{#          <a href="{% url 'myapp:index' %}" class="nav-link">#}
+{#            <i class="nav-icon fas fa-th"></i>#}
+{#            <p>#}
+{#              search3#}
+              {#              <span class="right badge badge-danger">New</span>#}
+{#              <i class="right fas fa-angle-left"></i>#}
+{##}
+{#            </p>#}
+{#          </a>#}
+{##}
+{#        </li>#}
+        {#        test#}
+
+
+        {#添加 20220110#}
+        <li class="nav-header">肉品管理類</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-circle"></i>
+            <p>
+              牛肉管理
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview" style="display: none;">
+            {#            first#}
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  訂購單
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:beefList' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>列表</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:beefCreate' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>新增</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            {#            second#}
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  牛肉分布
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:beefdistrList' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>列表</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:beefdistrCreate' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>新增</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            {#            third#}
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  進貨庫存量
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:incomingList' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>列表</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:incomingCreate' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>新增</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            {#            fourth#}
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  出貨庫存量
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:shippedList' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>列表</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">{# {% url 'massmer:shippedCreate' %} #}
+                    <i class="far fa-dot-circle nav-icon"></i>
+                    <p>新增</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>

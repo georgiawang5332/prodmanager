@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {# 範例: https://github.com/mikeku1116/django-filter-package #}
+  {# 範例2: https://www.youtube.com/watch?v=G-Rct7Na0UQ#}
+  {# 範例3: Create A Search Bar  #}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Home Page</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+
+        <h1>如何在 Django 中實現多重搜索功能</h1>
+        <h3>Django-filter 套版教學</h3>
+        <p>https://django-filter.readthedocs.io/en/stable/index.html</p>
+        <hr>
+
+        <form method='POST' role="form">
+          {% csrf_token %}
+          名稱：{{ empmodelFilter.form.empname }}
+          性別：{{ empmodelFilter.form.gender }}
+          職業部門：{{ empmodelFilter.form.occupation }}
+          <br>
+          薪資：{{ empmodelFilter.form.salary }}
+          <br>
+          <br>
+          <input type="submit" class="btn btn-primary" value="查詢"/>
+        </form>
+
+        <br/>
+        <table border="1" class="table">
+          <thead>
+          <th>編號</th>
+          <th>姓名</th>
+          <th>性別</th>
+          <th>職業</th>
+          <th>薪水</th>
+          </thead>
+          <tbody>
+          {% for empmodels in empmodelFilter.qs %}
+            <tr>
+              <td>{{ empmodels.empno }}</td>
+              <td>{{ empmodels.empname }}</td>
+              <td>{{ empmodels.get_gender_display }}</td>
+              <td>{{ empmodels.occupation }}</td>
+              <td>{{ empmodels.salary }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+
+      </div><!--container-fluid-->
+    </div><!-- /.content -->
+  </div><!-- /.content-wrapper -->
+{% endblock %}
